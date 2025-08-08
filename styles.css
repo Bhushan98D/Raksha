@@ -1,0 +1,598 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f2 0%, #fff5e6 50%, #fff0f5 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.music-btn {
+    background: linear-gradient(45deg, #ff6b9d, #ff8e53);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #ff6b9d, #ff8e53, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.title-line {
+    display: block;
+    font-weight: 700;
+}
+
+.sister-name {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ff6b9d;
+    text-shadow: 2px 2px 4px rgba(255, 107, 157, 0.3);
+}
+
+@keyframes titleGlow {
+    from { filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5)); }
+    to { filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8)); }
+}
+
+.rakhi-decoration {
+    font-size: 2rem;
+    color: #ff6b9d;
+    animation: float 3s ease-in-out infinite;
+}
+
+.left-rakhi { animation-delay: 0s; }
+.right-rakhi { animation-delay: 1.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+
+.love-message {
+    margin: 60px 0;
+}
+
+.message-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 245, 0.9));
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+    border: 2px solid rgba(255, 107, 157, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.message-card:hover {
+    transform: translateY(-5px);
+}
+
+.diya-decoration {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #ff8e53;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.message-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Personal Message Section */
+.personal-message {
+    margin: 60px 0;
+}
+
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ff6b9d;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(255, 107, 157, 0.3);
+}
+
+.message-content {
+    display: flex;
+    justify-content: center;
+}
+
+.message-box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 250, 0.95));
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.15);
+    border: 2px solid rgba(255, 107, 157, 0.1);
+    max-width: 800px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.message-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 107, 157, 0.2);
+}
+
+.decoration-star {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffd700;
+    font-size: 1.5rem;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.message-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Photo Section */
+.photo-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.photo-frame {
+    display: inline-block;
+    position: relative;
+}
+
+.frame-border {
+    background: linear-gradient(45deg, #ff6b9d, #ff8e53, #ffd700);
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+    animation: frameGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes frameGlow {
+    from { box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3); }
+    to { box-shadow: 0 15px 40px rgba(255, 107, 157, 0.5); }
+}
+
+.photo-area {
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(135deg, #fff5f7, #fff0f5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px dashed #ff6b9d;
+}
+
+.photo-area:hover {
+    background: linear-gradient(135deg, #ffe6f2, #fff0f5);
+    transform: scale(1.02);
+}
+
+.photo-area i {
+    font-size: 3rem;
+    color: #ff6b9d;
+    margin-bottom: 15px;
+}
+
+.photo-area p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.photo-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+/* Quote Section */
+.quote-section {
+    margin: 60px 0;
+}
+
+.quote-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 248, 250, 0.9));
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #ff6b9d;
+    margin-bottom: 20px;
+}
+
+.quote-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    color: #ff6b9d;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Thank You Section */
+.thank-you-section {
+    margin: 60px 0;
+}
+
+.thank-you-card {
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(255, 142, 83, 0.1));
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.2);
+    border: 2px solid rgba(255, 107, 157, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.thank-you-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff6b9d;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(255, 107, 157, 0.3);
+}
+
+.thank-you-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.heart-animation {
+    font-size: 2rem;
+    color: #ff6b9d;
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-rakhi, .floating-flower, .floating-star, .floating-heart {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatAround 6s ease-in-out infinite;
+}
+
+.floating-rakhi {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-flower {
+    top: 60%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.floating-star {
+    top: 80%;
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.floating-heart {
+    top: 30%;
+    right: 30%;
+    animation-delay: 4.5s;
+}
+
+@keyframes floatAround {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg); 
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .sister-name {
+        font-size: 3rem;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .message-card, .message-box, .quote-card, .thank-you-card {
+        padding: 30px 20px;
+    }
+    
+    .photo-area {
+        width: 300px;
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .message-text, .quote-text {
+        font-size: 1rem;
+    }
+    
+    .rakhi-decoration {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .sister-name {
+        font-size: 2.5rem;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .photo-area {
+        width: 250px;
+        height: 200px;
+    }
+    
+    .floating-elements {
+        display: none;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.container {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+} 
+
+/* Grass Strip Styles */
+.grass-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.grass-blades {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 10px;
+}
+
+.grass-blade {
+    width: 3px;
+    height: var(--height);
+    background: linear-gradient(to top, #2d5a27 0%, #4a7c59 30%, #6b8e23 60%, #9acd32 100%);
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    transform-origin: bottom center;
+    animation: grassSway 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.grass-blade::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #2d5a27 0%, #4a7c59 30%, #6b8e23 60%, #9acd32 100%);
+    border-radius: 2px 2px 0 0;
+    transform: scaleY(0.8);
+    transform-origin: bottom center;
+    animation: grassSwayInner 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes grassSway {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(-8deg) translateY(-2px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-1px);
+    }
+    75% {
+        transform: rotate(8deg) translateY(-2px);
+    }
+}
+
+@keyframes grassSwayInner {
+    0%, 100% {
+        transform: scaleY(0.8) rotate(0deg);
+    }
+    25% {
+        transform: scaleY(0.8) rotate(-5deg);
+    }
+    50% {
+        transform: scaleY(0.8) rotate(0deg);
+    }
+    75% {
+        transform: scaleY(0.8) rotate(5deg);
+    }
+}
+
+/* Add some variation to grass blades */
+.grass-blade:nth-child(odd) {
+    background: linear-gradient(to top, #2d5a27 0%, #4a7c59 40%, #6b8e23 70%, #9acd32 100%);
+}
+
+.grass-blade:nth-child(even) {
+    background: linear-gradient(to top, #2d5a27 0%, #4a7c59 20%, #6b8e23 50%, #9acd32 100%);
+}
+
+.grass-blade:nth-child(3n) {
+    background: linear-gradient(to top, #2d5a27 0%, #4a7c59 35%, #6b8e23 65%, #9acd32 100%);
+}
+
+/* Responsive grass */
+@media (max-width: 768px) {
+    .grass-container {
+        height: 60px;
+    }
+    
+    .grass-blade {
+        width: 2px;
+    }
+    
+    .grass-blades {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grass-container {
+        height: 50px;
+    }
+    
+    .grass-blade {
+        width: 1.5px;
+    }
+}
+
+/* Ensure content doesn't overlap with grass */
+.container {
+    padding-bottom: 100px;
+} 
